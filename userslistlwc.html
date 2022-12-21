@@ -1,0 +1,14 @@
+<template>
+    <div style="height: 500px;">
+        <template if:true={userlist}>
+             <lightning-datatable
+                     key-field="id"
+                     data={userlist}
+                     columns={columns}>
+             </lightning-datatable>
+        </template>
+        <template if:true={errorMessage}>
+                Please contact the salesforce administartor as the service isn't available right now.
+        </template>
+        </div>
+</template>
